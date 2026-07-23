@@ -1,58 +1,33 @@
-# 👥 Employee Attrition Analysis
+# Employee Attrition Analysis using Artificial Neural Network (ANN)
 
-📌 Project Overview
+ 📌 Project Overview
 
-Employee attrition is one of the biggest challenges faced by organizations, leading to increased recruitment costs, productivity loss, and reduced employee morale.
+Employee attrition is a major challenge for organizations as it increases recruitment costs, reduces productivity, and affects workforce stability.
 
-This project analyzes employee attrition data to identify the key factors influencing employee turnover and provides data-driven insights that can help organizations improve employee retention.
-
-This project was completed as part of the **Business Analyst Internship at Slash Mark IT Solutions**.
-
- 🎯 Business Problem
-
-High employee attrition negatively impacts an organization's performance by increasing hiring costs, reducing productivity, and affecting team stability.
-
-The objective of this project is to analyze employee data, identify the major reasons behind employee attrition, and provide actionable recommendations to support HR decision-making.
+This project analyzes the IBM HR Analytics Employee Attrition dataset to identify the key factors influencing employee turnover and develops an Artificial Neural Network (ANN) model to predict whether an employee is likely to leave the organization. The project combines Business Analytics techniques with Machine Learning to provide actionable insights for Human Resource (HR) departments. :contentReference[oaicite:0]{index=0}
 
  🎯 Objectives
 
-- Understand employee attrition patterns.
-- Perform data cleaning and preprocessing.
-- Explore relationships between employee characteristics and attrition.
-- Identify important factors influencing employee turnover.
-- Build predictive models to estimate attrition risk.
-- Generate business insights for HR departments.
+- Analyze employee data to understand attrition patterns.
+- Perform data preprocessing and Exploratory Data Analysis (EDA).
+- Identify important factors affecting employee retention.
+- Build an Artificial Neural Network (ANN) model for prediction.
+- Evaluate model performance.
+- Generate business recommendations to improve employee retention. :contentReference[oaicite:1]{index=1}
 
- 📊 Dataset
+ 📂 Dataset
 
-The project uses the **IBM HR Analytics Employee Attrition & Performance Dataset**.
+**Dataset:** IBM HR Analytics Employee Attrition & Performance Dataset
 
-The dataset contains employee-related information such as:
+**Dataset Summary**
 
-- Age
-- Attrition
-- Business Travel
-- Department
-- Distance From Home
-- Education
-- Environment Satisfaction
-- Gender
-- Job Involvement
-- Job Level
-- Job Role
-- Job Satisfaction
-- Marital Status
-- Monthly Income
-- OverTime
-- Performance Rating
-- Stock Option Level
-- Total Working Years
-- Work-Life Balance
-- Years at Company
-- Years Since Last Promotion
-- Years With Current Manager
+- Total Records: **1,470**
+- Total Features: **35**
+- Target Variable: **Attrition (Yes/No)**
+- Data Type: Numerical & Categorical
+- Missing Values: None :contentReference[oaicite:2]{index=2}
 
-🛠️ Tools & Technologies
+ 🛠️ Technologies Used
 
 - Python
 - Jupyter Notebook
@@ -61,154 +36,113 @@ The dataset contains employee-related information such as:
 - Matplotlib
 - Seaborn
 - Scikit-learn
-- SHAP (Explainable AI)
+- TensorFlow / Keras
 - SMOTE
-- Grid Search
+- StandardScaler
 
  🔄 Project Workflow
 
 1. Data Collection
-2. Data Cleaning
+2. Data Preprocessing
 3. Exploratory Data Analysis (EDA)
-4. Feature Engineering
+4. Feature Selection
 5. Handling Class Imbalance using SMOTE
-6. Model Training
-7. Hyperparameter Tuning
+6. Feature Scaling
+7. ANN Model Development
 8. Model Evaluation
-9. SHAP Explainability
-10. Business Insights & Recommendations
+9. Business Insights & Recommendations
 
- 📈 Exploratory Data Analysis
+ 📊 Key Insights
 
-The project includes:
+The analysis revealed that employee attrition is strongly influenced by:
 
-- Missing value analysis
-- Distribution analysis
-- Correlation analysis
-- Attrition comparison across departments
-- Overtime analysis
-- Monthly income analysis
-- Job satisfaction analysis
-- Work-life balance analysis
-- Feature importance visualization
+- Monthly Income
+- Job Level
+- Work-Life Balance
+- Job Involvement
+- Environment Satisfaction
+- Overtime
+- Years at Company
+- Total Working Years :contentReference[oaicite:3]{index=3}
 
- 🤖 Machine Learning
+Some important findings include:
 
-Models were trained to predict employee attrition.
+- Employees at Job Level 1 showed the highest attrition.
+- Poor work-life balance increased attrition.
+- Lower job involvement was associated with higher employee turnover.
+- Excessive overtime contributed to employee dissatisfaction and attrition. :contentReference[oaicite:4]{index=4}
 
-The workflow includes:
+ 🤖 Model Performance
 
-- Train-Test Split
-- Data Scaling
-- Feature Selection
-- Model Training
-- Hyperparameter Tuning using Grid Search
-- Performance Evaluation
+The Artificial Neural Network achieved:
 
- 📊 Model Evaluation
+- **Test Accuracy:** **88.45%**
+- **Test Loss:** **0.354**
 
-Model performance was evaluated using:
+The model demonstrated strong predictive capability and can support HR teams in identifying employees at higher risk of leaving the organization. :contentReference[oaicite:5]{index=5}
 
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- ROC-AUC Score
-- Confusion Matrix
+ 💼 Business Recommendations
 
-The project also uses **SHAP (SHapley Additive Explanations)** to understand how different features influence model predictions.
+Based on the analysis:
 
- 💡 Key Business Insights
+- Develop structured career growth programs.
+- Review salary and compensation policies.
+- Improve employee engagement initiatives.
+- Promote work-life balance.
+- Monitor overtime.
+- Conduct regular employee satisfaction surveys.
+- Use predictive analytics for proactive retention strategies. :contentReference[oaicite:6]{index=6}
 
-The analysis revealed several important findings:
+ 📁 Project Structure
 
-- Employees working overtime were more likely to leave the organization.
-- Lower monthly income was associated with higher attrition.
-- Poor work-life balance increased employee turnover.
-- Employees with fewer years at the company showed higher attrition rates.
-- Certain departments and job roles experienced higher employee turnover than others.
-
- 📌 Business Recommendations
-
-Based on the analysis, organizations should consider:
-
-- Reducing excessive overtime.
-- Improving work-life balance initiatives.
-- Reviewing compensation structures.
-- Strengthening employee engagement programs.
-- Providing career growth opportunities.
-- Monitoring high-risk employees using predictive analytics.
+```
+Employee-Attrition-Analysis/
+│
+├── Employee_Attrition_Analysis.ipynb
+├── HR_Employee_Attrition.csv
+├── README.md
+└── Images/
+```
 
  🚀 How to Run
 
-1. Clone the repository
+1. Clone the repository.
 
 ```bash
-git clone https://github.com/yourusername/employee-attrition-analysis.git
+git clone https://github.com/yourusername/Employee-Attrition-Analysis.git
 ```
 
-2. Navigate to the project directory
-
-```bash
-cd employee-attrition-analysis
-```
-
-3. Install dependencies
+2. Install dependencies.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Open Jupyter Notebook
+3. Open the notebook.
 
 ```bash
 jupyter notebook
 ```
 
-5. Run all notebook cells.
-
- 📂 Project Structure
-
-```
-Employee-Attrition-Analysis/
-│
-├── Data/
-│   └── HR_Employee_Attrition.csv
-│
-├── Notebook/
-│   └── Employee_Attrition_Analysis.ipynb
-│
-├── Images/
-│   └── Charts
-│
-├── README.md
-└── requirements.txt
-```
+4. Run all cells.
 
  📈 Business Value
 
-This project demonstrates how data analytics and machine learning can support Human Resource teams in identifying employees at risk of leaving the organization.
+This project demonstrates how Business Analytics and Machine Learning can help Human Resource departments:
 
-The insights generated can help organizations:
-
+- Predict employee attrition
 - Improve employee retention
-- Reduce hiring costs
-- Increase employee satisfaction
-- Support strategic HR decision-making
-
- 🔮 Future Improvements
-
-- Deploy the predictive model using Streamlit.
-- Build an interactive Power BI or Tableau dashboard.
-- Integrate real-time employee data.
-- Improve prediction accuracy using ensemble models.
+- Reduce recruitment costs
+- Support workforce planning
+- Enable data-driven decision-making :contentReference[oaicite:7]{index=7}
 
  👩‍💻 Author
 
-**Kavya**
+**Kavya P**
+
+Business Analyst Intern – Slash Mark IT Solutions
 
 B.E. Computer Science and Business Systems (CSBS)
 
-Business Analytics | Data Analytics | SQL | Python | Tableau
 
 
